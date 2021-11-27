@@ -42,7 +42,7 @@ namespace SeaWars
 
             // конструктор поля
             //первое поле
-            dataGridView1.ColumnCount = 10;
+            dataGridView1.ColumnCount = 9;
             dataGridView1.RowCount = 10;
             dataGridView1.Columns[0].HeaderText = "А";
             dataGridView1.Columns[1].HeaderText = "Б";
