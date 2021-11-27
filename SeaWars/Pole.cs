@@ -25,10 +25,9 @@ namespace SeaWars
 
         private void Pole_Load(object sender, EventArgs e)
         {
-            if (File.Exists("result.docx")) textBox3.Text = File.ReadAllText("result.docx");
+            listBox1.Items.AddRange(File.ReadAllLines("result.txt"));
             //button1.Enabled = false;
             textBox1.ReadOnly = true;
-            textBox3.ReadOnly = true;
             textBox4.ReadOnly = true;
             textBox4.Visible = false;
             radioButton2.Enabled = false;
@@ -138,11 +137,7 @@ namespace SeaWars
         {
             int poskol = dataGridView1.CurrentCell.ColumnIndex;
             int posstr = dataGridView1.CurrentCell.RowIndex;
-            if (dataGridView1.CurrentCell.Style.BackColor == default
-                /* && dataGridView1[poskol + 1,posstr].Style.BackColor == default && dataGridView1[poskol - 1, posstr].Style.BackColor == default
-                && dataGridView1[poskol, posstr + 1].Style.BackColor == default && dataGridView1[poskol, posstr - 1].Style.BackColor == default
-                && dataGridView1[poskol+ 1, posstr + 1].Style.BackColor == default && dataGridView1[poskol -1, posstr + 1].Style.BackColor == default
-                && dataGridView1[poskol - 1, posstr - 1].Style.BackColor == default && dataGridView1[poskol + 1, posstr - 1].Style.BackColor == default*/)
+            if (dataGridView1.CurrentCell.Style.BackColor == default)
             {
                 if (radioButton5.Checked == true)
                 {
@@ -797,7 +792,7 @@ namespace SeaWars
                             dataGridView1.CurrentCell.Style.BackColor = default;                            
                             try                           
                             {
-                                if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black);                                
+                                if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)                                
                                     dataGridView1[poskol, posstr + 1].Style.BackColor = default;                                   
                             }                           
                             catch                           

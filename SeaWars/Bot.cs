@@ -652,7 +652,8 @@ namespace SeaWars
                 && dataGridView2[0, 5].Style.BackColor == Color.Crimson && dataGridView2[0, 6].Style.BackColor == Color.Crimson)
             {
                 MessageBox.Show("Вы победили");
-                File.AppendAllText("result.docx", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
+                File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
+                dataGridView2.Enabled = false;
             }
             
             // Второй вариант
@@ -809,7 +810,8 @@ namespace SeaWars
                 && dataGridView2[5, 0].Style.BackColor == Color.Crimson && dataGridView2[6, 0].Style.BackColor == Color.Crimson && dataGridView2[7, 0].Style.BackColor == Color.Crimson && dataGridView2[8, 0].Style.BackColor == Color.Crimson)
             {
                 MessageBox.Show("Вы победили");
-                File.AppendAllText("result.docx", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
+                File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
+                dataGridView2.Enabled = false;
             }
             
             // Третий вариант
@@ -960,7 +962,8 @@ namespace SeaWars
                 && dataGridView2[0, 2].Style.BackColor == Color.Crimson && dataGridView2[1, 2].Style.BackColor == Color.Crimson && dataGridView2[2, 2].Style.BackColor == Color.Crimson && dataGridView2[3, 2].Style.BackColor == Color.Crimson)
             {
                 MessageBox.Show("Вы победили");
-                File.AppendAllText("result.docx", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
+                File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
+                dataGridView2.Enabled = false;
             }
         }
     }
