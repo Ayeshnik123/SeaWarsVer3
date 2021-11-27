@@ -150,14 +150,71 @@ namespace SeaWars
                         {
                             {
                                 dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                /*dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Gray;
-                                dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                            try
+                            {
+                                dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Gray;
+                            }
+                            catch
+                            {
+
+                            }
+                            try 
+                            { 
+                                dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray; 
+                            }
+                            catch
+                            {
+
+                            }
+                            try
+                            {
                                 dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Gray;
+                            }
+                            catch
+                            {
+
+                            }
+                            try
+                            {
                                 dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                            }
+                            catch
+                            {
+
+                            }
+
+                            try
+                            {
                                 dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                            }
+                            catch
+                            {
+
+                            }
+                            try
+                            {
                                 dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                            }
+                            catch
+                            {
+
+                            }
+                            try
+                            {
                                 dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
-                                dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;*/
+                            }
+                            catch
+                            {
+
+                            }
+                            try
+                            {
+                                dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                            }
+                            catch
+                            {
+
+                            }
                                 a++;
                                 if (a == 4) radioButton1.Enabled = false;
                                 if (a == 4) dataGridView1.Enabled = false;
@@ -166,21 +223,104 @@ namespace SeaWars
                         }
                     if (radioButton2.Checked)
                     {
-                        for (int i = 0; i < dataGridView1.RowCount; i++)
-                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                            {
-                                try
-                                {
-                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("Корабль вышел за границы поля");
-                                    dataGridView1.CurrentCell.Style.BackColor = default;
-                                    return;
-                                }
-                            }
+                        try
+                                
+                        {       
+                            dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;    
+                        }
+                                
+                        catch
+                                
+                        {
+                                    
+                            MessageBox.Show("Корабль вышел за границы поля");        
+                            dataGridView1.CurrentCell.Style.BackColor = default;
+                            return;
+                                
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+
                         a++;
                         if (a == 3) radioButton2.Enabled = false;
                         if (a == 3) dataGridView1.Enabled = false;
@@ -189,73 +329,274 @@ namespace SeaWars
                     }
                     if (radioButton3.Checked)
                     {
-                        for (int i = 0; i < dataGridView1.RowCount; i++)
-                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                        try
+                        {   
+                            dataGridView1.CurrentCell.Style.BackColor = Color.Black;    
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
+                            dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;      
+                        }                                
+                        catch                                
+                        {                                   
+                            MessageBox.Show("Корабль вышел за границы поля");                                    
+                            dataGridView1.CurrentCell.Style.BackColor = default;                                    
+                            try                                   
                             {
-                                try
-                                {
-                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
-                                    dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("Корабль вышел за границы поля");
-                                    dataGridView1.CurrentCell.Style.BackColor = default;
-                                    try
-                                    {
-                                        if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
-                                            dataGridView1[poskol + 1, posstr].Style.BackColor = default;
-                                    }
-                                    catch
-                                    {
+                                if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black) 
+                                    dataGridView1[poskol + 1, posstr].Style.BackColor = default;
+                            }  
+                            catch 
+                            {    
+                            }  
+                            return;   
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 3, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
 
-                                    }
-                                    return;
-                                }
-                            }
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 3, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 3, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
                         a++;
                         if (a == 2) radioButton4.Enabled = true;
                         if (a == 2) radioButton3.Enabled = false;
                         if (a == 2) dataGridView1.Enabled = false;
                     }
                     if (radioButton4.Checked)
-                    {
-                        for (int i = 0; i < dataGridView1.RowCount; i++)
-                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    {                               
+                        try                                
+                        {                                   
+                            dataGridView1.CurrentCell.Style.BackColor = Color.Black;                                    
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;                                   
+                            dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;                                   
+                            dataGridView1[poskol + 3, posstr].Style.BackColor = Color.Black;                                
+                        }                               
+                        catch                               
+                        {                                    
+                            MessageBox.Show("Корабль вышел за границы поля");                                    
+                            dataGridView1.CurrentCell.Style.BackColor = default;                                   
+                            try                  
+                            {                                        
+                                if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)                                            
+                                    dataGridView1[poskol + 1, posstr].Style.BackColor = default;                                   
+                            }                                   
+                            catch                                   
                             {
-                                try
-                                {
-                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Black;
-                                    dataGridView1[poskol + 2, posstr].Style.BackColor = Color.Black;
-                                    dataGridView1[poskol + 3, posstr].Style.BackColor = Color.Black;
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("Корабль вышел за границы поля");
-                                    dataGridView1.CurrentCell.Style.BackColor = default;
-                                    try
-                                    {
-                                        if (dataGridView1[poskol + 1, posstr].Style.BackColor == Color.Black)
-                                            dataGridView1[poskol + 1, posstr].Style.BackColor = default;
-                                    }
-                                    catch
-                                    {
+                                
+                            }       
+                            try                                    
+                            {                                        
+                                if (dataGridView1[poskol + 2, posstr].Style.BackColor == Color.Black)                                           
+                                    dataGridView1[poskol + 2, posstr].Style.BackColor = default;                                   
+                            }                                    
+                            catch                                    
+                            {
+                                
+                            }                                   
+                            return;                                
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 4, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
 
-                                    }
-                                    try
-                                    {
-                                        if (dataGridView1[poskol + 2, posstr].Style.BackColor == Color.Black)
-                                            dataGridView1[poskol + 2, posstr].Style.BackColor = default;
-                                    }
-                                    catch
-                                    {
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 4, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
 
-                                    }
-                                    return;
-                                }
-                            }
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 4, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 3, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 3, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 2, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
                         a++;
                         if (a == 1) radioButton4.Enabled = false;
                         if (a == 1) dataGridView1.Enabled = false;
@@ -269,28 +610,173 @@ namespace SeaWars
                     if (radioButton1.Checked)
                     {
                         dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
                         a++;
                         if (a == 4) radioButton2.Enabled = true;
                         if (a == 4) radioButton1.Enabled = false;
                         if (a == 4) dataGridView1.Enabled = false;
                     }
                     if (radioButton2.Checked)
-                    {
-                        for (int i = 0; i < dataGridView1.RowCount; i++)
-                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                            {
-                                try
-                                {
-                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("Корабль вышел за границы поля");
-                                    dataGridView1.CurrentCell.Style.BackColor = default;
-                                    return;
-                                }
-                            }
+                    {   
+                        try                              
+                        {                                   
+                            dataGridView1.CurrentCell.Style.BackColor = Color.Black;                                   
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;                               
+                        }                               
+                        catch                              
+                        {
+                            MessageBox.Show("Корабль вышел за границы поля");                                 
+                            dataGridView1.CurrentCell.Style.BackColor = default;                                  
+                            return;
+                        }
+                        //
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        //
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        //
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        //
                         a++;
                         if (a == 3) radioButton3.Enabled = true;
                         if (a == 3) radioButton2.Enabled = false;
@@ -298,74 +784,278 @@ namespace SeaWars
 
                     }
                     if (radioButton3.Checked)
-                    {
-                        for (int i = 0; i < dataGridView1.RowCount; i++)
-                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    {                               
+                        try                        
+                        {                     
+                            dataGridView1.CurrentCell.Style.BackColor = Color.Black;
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
+                            dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;                           
+                        }                        
+                        catch                        
+                        {                       
+                            MessageBox.Show("Корабль вышел за границы поля");
+                            dataGridView1.CurrentCell.Style.BackColor = default;                            
+                            try                           
                             {
-                                try
-                                {
-                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
-                                    dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("Корабль вышел за границы поля");
-                                    dataGridView1.CurrentCell.Style.BackColor = default;
-                                    try
-                                    {
-                                        if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
-                                            dataGridView1[poskol, posstr + 1].Style.BackColor = default;
-                                    }
-                                    catch
-                                    {
+                                if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black);                                
+                                    dataGridView1[poskol, posstr + 1].Style.BackColor = default;                                   
+                            }                           
+                            catch                           
+                            {
+                               
+                            }                           
+                            return;                           
+                        }
+                        //
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
 
-                                    }
-                                    return;
-                                }
-                            }
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 3].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        //
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 3].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        //
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 3].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        //
                         a++;
                         if (a == 2) radioButton4.Enabled = true;
                         if (a == 2) radioButton3.Enabled = false;
                         if (a == 2) dataGridView1.Enabled = false;
                     }
                     if (radioButton4.Checked)
-                    {
-                        for (int i = 0; i < dataGridView1.RowCount; i++)
-                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    {                
+                        try                      
+                        {                     
+                            dataGridView1.CurrentCell.Style.BackColor = Color.Black;                       
+                            dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;                         
+                            dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;                          
+                            dataGridView1[poskol, posstr + 3].Style.BackColor = Color.Black;
+                        }                      
+                        catch                    
+                        {                     
+                            MessageBox.Show("Корабль вышел за границы поля");                         
+                            dataGridView1.CurrentCell.Style.BackColor = default;                      
+                            try                         
+                            {                        
+                                if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)                 
+                                    dataGridView1[poskol, posstr + 1].Style.BackColor = default;                         
+                            }                          
+                            catch                           
                             {
-                                try
-                                {
-                                    dataGridView1.CurrentCell.Style.BackColor = Color.Black;
-                                    dataGridView1[poskol, posstr + 1].Style.BackColor = Color.Black;
-                                    dataGridView1[poskol, posstr + 2].Style.BackColor = Color.Black;
-                                    dataGridView1[poskol, posstr + 3].Style.BackColor = Color.Black;
-                                }
-                                catch
-                                {
-                                    MessageBox.Show("Корабль вышел за границы поля");
-                                    dataGridView1.CurrentCell.Style.BackColor = default;
-                                    try
-                                    {
-                                        if (dataGridView1[poskol, posstr + 1].Style.BackColor == Color.Black)
-                                            dataGridView1[poskol, posstr + 1].Style.BackColor = default;
-                                    }
-                                    catch
-                                    {
+                                
+                            }                         
+                            try         
+                            {
+                                if (dataGridView1[poskol, posstr + 2].Style.BackColor == Color.Black)                               
+                                    dataGridView1[poskol, posstr + 2].Style.BackColor = default;                                   
+                            }                           
+                            catch                        
+                            {
+                                
+                            }                            
+                            return;                           
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
 
-                                    }
-                                    try
-                                    {
-                                        if (dataGridView1[poskol, posstr + 2].Style.BackColor == Color.Black)
-                                            dataGridView1[poskol, posstr + 2].Style.BackColor = default;
-                                    }
-                                    catch
-                                    {
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
 
-                                    }
-                                    return;
-                                }
-                            }
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 3].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol + 1, posstr + 4].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol, posstr + 4].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr - 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 1].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 2].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 3].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
+                        try
+                        {
+                            dataGridView1[poskol - 1, posstr + 4].Style.BackColor = Color.Gray;
+                        }
+                        catch
+                        {
+
+                        }
                         a++;
                         if (a == 1) radioButton4.Enabled = false;
                         if (a == 1) dataGridView1.Enabled = false;
