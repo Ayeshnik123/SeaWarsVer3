@@ -20,16 +20,16 @@ namespace SeaWars
 
         private void Igrat_Click(object sender, EventArgs e) // конструктор поля
         {
-            Form pole = new Pole();
-            pole.Show();
-            this.Hide();
+            Form pole = new Pole(); // новая форма
+            pole.Show(); // показываем форму pole
+            this.Hide(); // скрываем текущую форму
         }
 
 
 
         private void oprog_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Игра 'Морской Бой'\nРазработчик - Кучаев Сергей ИСП-41");
+            MessageBox.Show("Игра 'Морской Бой'\nРазработчик - Кучаев Сергей ИСП-41"); // выводим сообщение
         }
     }
 }

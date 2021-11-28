@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SeaWars
 {
@@ -13,14 +9,14 @@ namespace SeaWars
     {
         public static void Pole(DataGridView dataGridView2, int rastanovka)
         {
-            Random rand = new Random();
+            Random rand = new Random(); // делаем случайную генерацию чисел
             for (int i = 0; i < 1; i++)
             {
-                rastanovka = rand.Next(1, 3);
+                rastanovka = rand.Next(1, 3); // выбираем случайно одно из трёх полей
                 switch (rastanovka)
                 {
-                    case (1):
-                        dataGridView2[1, 1].Style.BackColor = Color.Transparent;//1
+                    case (1): // первый вариант поля
+                        dataGridView2[1, 1].Style.BackColor = Color.Transparent;//1 
                         dataGridView2[5, 5].Style.BackColor = Color.Transparent;//1
                         dataGridView2[9, 9].Style.BackColor = Color.Transparent;//1
                         dataGridView2[3, 4].Style.BackColor = Color.Transparent;//1
@@ -42,7 +38,7 @@ namespace SeaWars
                         dataGridView2[0, 6].Style.BackColor = Color.Transparent;//4
                         break;
 
-                    case (2):
+                    case (2): // второй вариант поля
                         dataGridView2[0, 0].Style.BackColor = Color.Transparent;//1
                         dataGridView2[1, 4].Style.BackColor = Color.Transparent;//1
                         dataGridView2[8, 8].Style.BackColor = Color.Transparent;//1
@@ -65,7 +61,7 @@ namespace SeaWars
                         dataGridView2[8, 0].Style.BackColor = Color.Transparent;//4
                         break;
 
-                    case (3):
+                    case (3): // третий вариант поля
                         dataGridView2[1, 6].Style.BackColor = Color.Transparent;//1
                         dataGridView2[2, 9].Style.BackColor = Color.Transparent;//1
                         dataGridView2[7, 4].Style.BackColor = Color.Transparent;//1
@@ -90,7 +86,7 @@ namespace SeaWars
                 }
             }
         }
-        public static void shoot(DataGridView dataGridView1, int abv)
+        public static void shoot(DataGridView dataGridView1, int abv) // стрельба по полю игрока
         {
             Random rand = new Random();
             for (int i = 0; i < 1; i++)
@@ -99,414 +95,464 @@ namespace SeaWars
                 switch (abv)
                 {
                     case (1):
-                        if (dataGridView1[0, 0].Style.BackColor == Color.Black) dataGridView1[0, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 0].Style.BackColor == default) dataGridView1[0, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 0].Style.BackColor == Color.Black) dataGridView1[0, 0].Style.BackColor = Color.Red; // при попадании окрашиваем в красный
+                        if (dataGridView1[0, 0].Style.BackColor == default || dataGridView1[0, 0].Style.BackColor == Color.Transparent) dataGridView1[0, 0].Style.BackColor = Color.Aqua; // при промахе в голубой
+                        if (dataGridView1[0, 0].Style.BackColor == Color.Aqua || dataGridView1[0, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (2):
                         if (dataGridView1[1, 0].Style.BackColor == Color.Black) dataGridView1[1, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 0].Style.BackColor == default) dataGridView1[1, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 0].Style.BackColor == default || dataGridView1[1, 0].Style.BackColor == Color.Transparent) dataGridView1[1, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 0].Style.BackColor == Color.Aqua || dataGridView1[1, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (3):
                         if (dataGridView1[2, 0].Style.BackColor == Color.Black) dataGridView1[2, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 0].Style.BackColor == default) dataGridView1[2, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 0].Style.BackColor == default || dataGridView1[2, 0].Style.BackColor == Color.Transparent) dataGridView1[2, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 0].Style.BackColor == Color.Aqua || dataGridView1[2, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (4):
                         if (dataGridView1[3, 0].Style.BackColor == Color.Black) dataGridView1[3, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 0].Style.BackColor == default) dataGridView1[3, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 0].Style.BackColor == default || dataGridView1[3, 0].Style.BackColor == Color.Transparent) dataGridView1[3, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 0].Style.BackColor == Color.Aqua || dataGridView1[3, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (5):
                         if (dataGridView1[4, 0].Style.BackColor == Color.Black) dataGridView1[4, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 0].Style.BackColor == default) dataGridView1[4, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 0].Style.BackColor == default || dataGridView1[4, 0].Style.BackColor == Color.Transparent) dataGridView1[4, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 0].Style.BackColor == Color.Aqua || dataGridView1[4, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (6):
                         if (dataGridView1[5, 0].Style.BackColor == Color.Black) dataGridView1[5, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 0].Style.BackColor == default) dataGridView1[5, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 0].Style.BackColor == default || dataGridView1[5, 0].Style.BackColor == Color.Transparent) dataGridView1[5, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 0].Style.BackColor == Color.Aqua || dataGridView1[5, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (7):
                         if (dataGridView1[6, 0].Style.BackColor == Color.Black) dataGridView1[6, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 0].Style.BackColor == default) dataGridView1[6, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 0].Style.BackColor == default || dataGridView1[6, 0].Style.BackColor == Color.Transparent) dataGridView1[6, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 0].Style.BackColor == Color.Aqua || dataGridView1[6, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (8):
                         if (dataGridView1[7, 0].Style.BackColor == Color.Black) dataGridView1[7, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 0].Style.BackColor == default) dataGridView1[7, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 0].Style.BackColor == default || dataGridView1[7, 0].Style.BackColor == Color.Transparent) dataGridView1[7, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 0].Style.BackColor == Color.Aqua || dataGridView1[7, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (9):
                         if (dataGridView1[8, 0].Style.BackColor == Color.Black) dataGridView1[8, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 0].Style.BackColor == default) dataGridView1[8, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 0].Style.BackColor == default || dataGridView1[8, 0].Style.BackColor == Color.Transparent) dataGridView1[8, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 0].Style.BackColor == Color.Aqua || dataGridView1[8, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (10):
                         if (dataGridView1[9, 0].Style.BackColor == Color.Black) dataGridView1[9, 0].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 0].Style.BackColor == default) dataGridView1[9, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 0].Style.BackColor == default || dataGridView1[9, 0].Style.BackColor == Color.Transparent) dataGridView1[9, 0].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 0].Style.BackColor == Color.Aqua || dataGridView1[9, 0].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (11):
                         if (dataGridView1[0, 1].Style.BackColor == Color.Black) dataGridView1[0, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 1].Style.BackColor == default) dataGridView1[0, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 1].Style.BackColor == default || dataGridView1[0, 1].Style.BackColor == Color.Transparent) dataGridView1[0, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 1].Style.BackColor == Color.Aqua || dataGridView1[0, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (12):
                         if (dataGridView1[1, 1].Style.BackColor == Color.Black) dataGridView1[1, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 1].Style.BackColor == default) dataGridView1[1, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 1].Style.BackColor == default || dataGridView1[1, 1].Style.BackColor == Color.Transparent) dataGridView1[1, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 1].Style.BackColor == Color.Aqua || dataGridView1[1, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (13):
                         if (dataGridView1[2, 1].Style.BackColor == Color.Black) dataGridView1[2, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 1].Style.BackColor == default) dataGridView1[2, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 1].Style.BackColor == default || dataGridView1[2, 1].Style.BackColor == Color.Transparent) dataGridView1[2, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 1].Style.BackColor == Color.Aqua || dataGridView1[2, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (14):
                         if (dataGridView1[3, 1].Style.BackColor == Color.Black) dataGridView1[3, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 1].Style.BackColor == default) dataGridView1[3, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 1].Style.BackColor == default || dataGridView1[3, 1].Style.BackColor == Color.Transparent) dataGridView1[3, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 1].Style.BackColor == Color.Aqua || dataGridView1[3, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (15):
                         if (dataGridView1[4, 1].Style.BackColor == Color.Black) dataGridView1[4, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 1].Style.BackColor == default) dataGridView1[4, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 1].Style.BackColor == default || dataGridView1[4, 1].Style.BackColor == Color.Transparent) dataGridView1[4, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 1].Style.BackColor == Color.Aqua || dataGridView1[4, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (16):
                         if (dataGridView1[5, 1].Style.BackColor == Color.Black) dataGridView1[5, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 1].Style.BackColor == default) dataGridView1[5, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 1].Style.BackColor == default || dataGridView1[5, 1].Style.BackColor == Color.Transparent) dataGridView1[5, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 1].Style.BackColor == Color.Aqua || dataGridView1[5, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (17):
                         if (dataGridView1[6, 1].Style.BackColor == Color.Black) dataGridView1[6, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 1].Style.BackColor == default) dataGridView1[6, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 1].Style.BackColor == default || dataGridView1[6, 1].Style.BackColor == Color.Transparent) dataGridView1[6, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 1].Style.BackColor == Color.Aqua || dataGridView1[6, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (18):
                         if (dataGridView1[7, 1].Style.BackColor == Color.Black) dataGridView1[7, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 1].Style.BackColor == default) dataGridView1[7, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 1].Style.BackColor == default || dataGridView1[7, 1].Style.BackColor == Color.Transparent) dataGridView1[7, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 1].Style.BackColor == Color.Aqua || dataGridView1[7, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (19):
                         if (dataGridView1[8, 1].Style.BackColor == Color.Black) dataGridView1[8, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 1].Style.BackColor == default) dataGridView1[8, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 1].Style.BackColor == default || dataGridView1[8, 1].Style.BackColor == Color.Transparent) dataGridView1[8, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 1].Style.BackColor == Color.Aqua || dataGridView1[8, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (20):
                         if (dataGridView1[9, 1].Style.BackColor == Color.Black) dataGridView1[9, 1].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 1].Style.BackColor == default) dataGridView1[9, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 1].Style.BackColor == default || dataGridView1[9, 1].Style.BackColor == Color.Transparent) dataGridView1[9, 1].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 1].Style.BackColor == Color.Aqua || dataGridView1[9, 1].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (21):
                         if (dataGridView1[0, 2].Style.BackColor == Color.Black) dataGridView1[0, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 2].Style.BackColor == default) dataGridView1[0, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 2].Style.BackColor == default || dataGridView1[0, 2].Style.BackColor == Color.Transparent) dataGridView1[0, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 2].Style.BackColor == Color.Aqua || dataGridView1[0, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (22):
                         if (dataGridView1[1, 2].Style.BackColor == Color.Black) dataGridView1[1, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 2].Style.BackColor == default) dataGridView1[1, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 2].Style.BackColor == default || dataGridView1[1, 2].Style.BackColor == Color.Transparent) dataGridView1[1, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 2].Style.BackColor == Color.Aqua || dataGridView1[1, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (23):
                         if (dataGridView1[2, 2].Style.BackColor == Color.Black) dataGridView1[2, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 2].Style.BackColor == default) dataGridView1[2, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 2].Style.BackColor == default || dataGridView1[2, 2].Style.BackColor == Color.Transparent) dataGridView1[2, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 2].Style.BackColor == Color.Aqua || dataGridView1[2, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (24):
                         if (dataGridView1[3, 2].Style.BackColor == Color.Black) dataGridView1[3, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 2].Style.BackColor == default) dataGridView1[3, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 2].Style.BackColor == default || dataGridView1[3, 2].Style.BackColor == Color.Transparent) dataGridView1[3, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 2].Style.BackColor == Color.Aqua || dataGridView1[3, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (25):
                         if (dataGridView1[4, 2].Style.BackColor == Color.Black) dataGridView1[4, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 2].Style.BackColor == default) dataGridView1[4, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 2].Style.BackColor == default || dataGridView1[4, 2].Style.BackColor == Color.Transparent) dataGridView1[4, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 2].Style.BackColor == Color.Aqua || dataGridView1[4, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (26):
                         if (dataGridView1[5, 2].Style.BackColor == Color.Black) dataGridView1[5, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 2].Style.BackColor == default) dataGridView1[5, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 2].Style.BackColor == default || dataGridView1[5, 2].Style.BackColor == Color.Transparent) dataGridView1[5, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 2].Style.BackColor == Color.Aqua || dataGridView1[5, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (27):
                         if (dataGridView1[6, 2].Style.BackColor == Color.Black) dataGridView1[6, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 2].Style.BackColor == default) dataGridView1[6, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 2].Style.BackColor == default || dataGridView1[6, 2].Style.BackColor == Color.Transparent) dataGridView1[6, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 2].Style.BackColor == Color.Aqua || dataGridView1[6, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (28):
                         if (dataGridView1[7, 2].Style.BackColor == Color.Black) dataGridView1[7, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 2].Style.BackColor == default) dataGridView1[7, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 2].Style.BackColor == default || dataGridView1[7, 2].Style.BackColor == Color.Transparent) dataGridView1[7, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 2].Style.BackColor == Color.Aqua || dataGridView1[7, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (29):
                         if (dataGridView1[8, 2].Style.BackColor == Color.Black) dataGridView1[8, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 2].Style.BackColor == default) dataGridView1[8, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 2].Style.BackColor == default || dataGridView1[8, 2].Style.BackColor == Color.Transparent) dataGridView1[8, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 2].Style.BackColor == Color.Aqua || dataGridView1[8, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (30):
                         if (dataGridView1[9, 2].Style.BackColor == Color.Black) dataGridView1[9, 2].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 2].Style.BackColor == default) dataGridView1[9, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 2].Style.BackColor == default || dataGridView1[9, 2].Style.BackColor == Color.Transparent) dataGridView1[9, 2].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 2].Style.BackColor == Color.Aqua || dataGridView1[9, 2].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (31):
                         if (dataGridView1[0, 3].Style.BackColor == Color.Black) dataGridView1[0, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 3].Style.BackColor == default) dataGridView1[0, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 3].Style.BackColor == default || dataGridView1[0, 3].Style.BackColor == Color.Transparent) dataGridView1[0, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 3].Style.BackColor == Color.Aqua || dataGridView1[0, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (32):
                         if (dataGridView1[1, 3].Style.BackColor == Color.Black) dataGridView1[1, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 3].Style.BackColor == default) dataGridView1[1, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 3].Style.BackColor == default || dataGridView1[1, 3].Style.BackColor == Color.Transparent) dataGridView1[1, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 3].Style.BackColor == Color.Aqua || dataGridView1[1, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (33):
                         if (dataGridView1[2, 3].Style.BackColor == Color.Black) dataGridView1[2, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 3].Style.BackColor == default) dataGridView1[2, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 3].Style.BackColor == default || dataGridView1[2, 3].Style.BackColor == Color.Transparent) dataGridView1[2, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 3].Style.BackColor == Color.Aqua || dataGridView1[2, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (34):
                         if (dataGridView1[3, 3].Style.BackColor == Color.Black) dataGridView1[3, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 3].Style.BackColor == default) dataGridView1[3, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 3].Style.BackColor == default || dataGridView1[3, 3].Style.BackColor == Color.Transparent) dataGridView1[3, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 3].Style.BackColor == Color.Aqua || dataGridView1[3, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (35):
                         if (dataGridView1[4, 3].Style.BackColor == Color.Black) dataGridView1[4, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 3].Style.BackColor == default) dataGridView1[4, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 3].Style.BackColor == default || dataGridView1[4, 3].Style.BackColor == Color.Transparent) dataGridView1[4, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 3].Style.BackColor == Color.Aqua || dataGridView1[4, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (36):
                         if (dataGridView1[5, 3].Style.BackColor == Color.Black) dataGridView1[5, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 3].Style.BackColor == default) dataGridView1[5, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 3].Style.BackColor == default || dataGridView1[5, 3].Style.BackColor == Color.Transparent) dataGridView1[5, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 3].Style.BackColor == Color.Aqua || dataGridView1[5, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (37):
                         if (dataGridView1[6, 3].Style.BackColor == Color.Black) dataGridView1[6, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 3].Style.BackColor == default) dataGridView1[6, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 3].Style.BackColor == default || dataGridView1[6, 3].Style.BackColor == Color.Transparent) dataGridView1[6, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 3].Style.BackColor == Color.Aqua || dataGridView1[6, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (38):
                         if (dataGridView1[7, 3].Style.BackColor == Color.Black) dataGridView1[7, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 3].Style.BackColor == default) dataGridView1[7, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 3].Style.BackColor == default || dataGridView1[7, 3].Style.BackColor == Color.Transparent) dataGridView1[7, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 3].Style.BackColor == Color.Aqua || dataGridView1[7, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (39):
                         if (dataGridView1[8, 3].Style.BackColor == Color.Black) dataGridView1[8, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 3].Style.BackColor == default) dataGridView1[8, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 3].Style.BackColor == default || dataGridView1[8, 3].Style.BackColor == Color.Transparent) dataGridView1[8, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 3].Style.BackColor == Color.Aqua || dataGridView1[8, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (40):
                         if (dataGridView1[9, 3].Style.BackColor == Color.Black) dataGridView1[9, 3].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 3].Style.BackColor == default) dataGridView1[9, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 3].Style.BackColor == default || dataGridView1[9, 3].Style.BackColor == Color.Transparent) dataGridView1[9, 3].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 3].Style.BackColor == Color.Aqua || dataGridView1[9, 3].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (41):
                         if (dataGridView1[0, 4].Style.BackColor == Color.Black) dataGridView1[0, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 4].Style.BackColor == default) dataGridView1[0, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 4].Style.BackColor == default || dataGridView1[0, 4].Style.BackColor == Color.Transparent) dataGridView1[0, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 4].Style.BackColor == Color.Aqua || dataGridView1[0, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (42):
                         if (dataGridView1[1, 4].Style.BackColor == Color.Black) dataGridView1[1, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 4].Style.BackColor == default) dataGridView1[1, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 4].Style.BackColor == default || dataGridView1[1, 4].Style.BackColor == Color.Transparent) dataGridView1[1, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 4].Style.BackColor == Color.Aqua || dataGridView1[1, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (43):
                         if (dataGridView1[2, 4].Style.BackColor == Color.Black) dataGridView1[2, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 4].Style.BackColor == default) dataGridView1[2, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 4].Style.BackColor == default || dataGridView1[2, 4].Style.BackColor == Color.Transparent) dataGridView1[2, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 4].Style.BackColor == Color.Aqua || dataGridView1[2, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (44):
                         if (dataGridView1[3, 4].Style.BackColor == Color.Black) dataGridView1[3, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 4].Style.BackColor == default) dataGridView1[3, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 4].Style.BackColor == default || dataGridView1[3, 4].Style.BackColor == Color.Transparent) dataGridView1[3, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 4].Style.BackColor == Color.Aqua || dataGridView1[3, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (45):
                         if (dataGridView1[4, 4].Style.BackColor == Color.Black) dataGridView1[4, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 4].Style.BackColor == default) dataGridView1[4, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 4].Style.BackColor == default || dataGridView1[4, 4].Style.BackColor == Color.Transparent) dataGridView1[4, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 4].Style.BackColor == Color.Aqua || dataGridView1[4, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (46):
                         if (dataGridView1[5, 4].Style.BackColor == Color.Black) dataGridView1[5, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 4].Style.BackColor == default) dataGridView1[5, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 4].Style.BackColor == default || dataGridView1[5, 4].Style.BackColor == Color.Transparent) dataGridView1[5, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 4].Style.BackColor == Color.Aqua || dataGridView1[5, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (47):
                         if (dataGridView1[6, 4].Style.BackColor == Color.Black) dataGridView1[6, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 4].Style.BackColor == default) dataGridView1[6, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 4].Style.BackColor == default || dataGridView1[6, 4].Style.BackColor == Color.Transparent) dataGridView1[6, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 4].Style.BackColor == Color.Aqua || dataGridView1[6, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (48):
                         if (dataGridView1[7, 4].Style.BackColor == Color.Black) dataGridView1[7, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 4].Style.BackColor == default) dataGridView1[7, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 4].Style.BackColor == default || dataGridView1[7, 4].Style.BackColor == Color.Transparent) dataGridView1[7, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 4].Style.BackColor == Color.Aqua || dataGridView1[7, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (49):
                         if (dataGridView1[8, 4].Style.BackColor == Color.Black) dataGridView1[8, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 4].Style.BackColor == default) dataGridView1[8, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 4].Style.BackColor == default || dataGridView1[8, 4].Style.BackColor == Color.Transparent) dataGridView1[8, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 4].Style.BackColor == Color.Aqua || dataGridView1[8, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (50):
                         if (dataGridView1[9, 4].Style.BackColor == Color.Black) dataGridView1[9, 4].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 4].Style.BackColor == default) dataGridView1[9, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 4].Style.BackColor == default || dataGridView1[9, 4].Style.BackColor == Color.Transparent) dataGridView1[9, 4].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 4].Style.BackColor == Color.Aqua || dataGridView1[9, 4].Style.BackColor == Color.Red) rand.Next(1, 101);
                         break;
                     case (51):
                         if (dataGridView1[0, 5].Style.BackColor == Color.Black) dataGridView1[0, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 5].Style.BackColor == default) dataGridView1[0, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 5].Style.BackColor == default || dataGridView1[0, 5].Style.BackColor == Color.Transparent) dataGridView1[0, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (52):
                         if (dataGridView1[1, 5].Style.BackColor == Color.Black) dataGridView1[1, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 5].Style.BackColor == default) dataGridView1[1, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 5].Style.BackColor == default || dataGridView1[1, 5].Style.BackColor == Color.Transparent) dataGridView1[1, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (53):
                         if (dataGridView1[2, 5].Style.BackColor == Color.Black) dataGridView1[2, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 5].Style.BackColor == default) dataGridView1[2, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 5].Style.BackColor == default || dataGridView1[2, 5].Style.BackColor == Color.Transparent) dataGridView1[2, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (54):
                         if (dataGridView1[3, 5].Style.BackColor == Color.Black) dataGridView1[3, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 5].Style.BackColor == default) dataGridView1[3, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 5].Style.BackColor == default || dataGridView1[3, 5].Style.BackColor == Color.Transparent) dataGridView1[3, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (55):
                         if (dataGridView1[4, 5].Style.BackColor == Color.Black) dataGridView1[4, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 5].Style.BackColor == default) dataGridView1[4, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 5].Style.BackColor == default || dataGridView1[4, 5].Style.BackColor == Color.Transparent) dataGridView1[4, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (56):
                         if (dataGridView1[5, 5].Style.BackColor == Color.Black) dataGridView1[5, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 5].Style.BackColor == default) dataGridView1[5, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 5].Style.BackColor == default || dataGridView1[5, 5].Style.BackColor == Color.Transparent) dataGridView1[5, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (57):
                         if (dataGridView1[6, 5].Style.BackColor == Color.Black) dataGridView1[6, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 5].Style.BackColor == default) dataGridView1[6, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 5].Style.BackColor == default || dataGridView1[6, 5].Style.BackColor == Color.Transparent) dataGridView1[6, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (58):
                         if (dataGridView1[7, 5].Style.BackColor == Color.Black) dataGridView1[7, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 5].Style.BackColor == default) dataGridView1[7, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 5].Style.BackColor == default || dataGridView1[7, 5].Style.BackColor == Color.Transparent) dataGridView1[7, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (59):
                         if (dataGridView1[8, 5].Style.BackColor == Color.Black) dataGridView1[8, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 5].Style.BackColor == default) dataGridView1[8, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 5].Style.BackColor == default || dataGridView1[8, 5].Style.BackColor == Color.Transparent) dataGridView1[8, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (60):
                         if (dataGridView1[9, 5].Style.BackColor == Color.Black) dataGridView1[9, 5].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 5].Style.BackColor == default) dataGridView1[9, 5].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 5].Style.BackColor == default || dataGridView1[9, 5].Style.BackColor == Color.Transparent) dataGridView1[9, 5].Style.BackColor = Color.Aqua;
                         break;
                     case (61):
                         if (dataGridView1[0, 6].Style.BackColor == Color.Black) dataGridView1[0, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 6].Style.BackColor == default) dataGridView1[0, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 6].Style.BackColor == default || dataGridView1[0, 6].Style.BackColor == Color.Transparent) dataGridView1[0, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (62):
                         if (dataGridView1[1, 6].Style.BackColor == Color.Black) dataGridView1[1, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 6].Style.BackColor == default) dataGridView1[1, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 6].Style.BackColor == default || dataGridView1[1, 6].Style.BackColor == Color.Transparent) dataGridView1[1, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (63):
                         if (dataGridView1[2, 6].Style.BackColor == Color.Black) dataGridView1[2, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 6].Style.BackColor == default) dataGridView1[2, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 6].Style.BackColor == default || dataGridView1[2, 6].Style.BackColor == Color.Transparent) dataGridView1[2, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (64):
                         if (dataGridView1[3, 6].Style.BackColor == Color.Black) dataGridView1[3, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 6].Style.BackColor == default) dataGridView1[3, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 6].Style.BackColor == default || dataGridView1[3, 6].Style.BackColor == Color.Transparent) dataGridView1[3, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (65):
                         if (dataGridView1[4, 6].Style.BackColor == Color.Black) dataGridView1[4, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 6].Style.BackColor == default) dataGridView1[4, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 6].Style.BackColor == default || dataGridView1[4, 6].Style.BackColor == Color.Transparent) dataGridView1[4, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (66):
                         if (dataGridView1[5, 6].Style.BackColor == Color.Black) dataGridView1[5, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 6].Style.BackColor == default) dataGridView1[5, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 6].Style.BackColor == default || dataGridView1[5, 6].Style.BackColor == Color.Transparent) dataGridView1[5, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (67):
                         if (dataGridView1[6, 6].Style.BackColor == Color.Black) dataGridView1[6, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 6].Style.BackColor == default) dataGridView1[6, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 6].Style.BackColor == default || dataGridView1[6, 6].Style.BackColor == Color.Transparent) dataGridView1[6, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (68):
                         if (dataGridView1[7, 6].Style.BackColor == Color.Black) dataGridView1[7, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 6].Style.BackColor == default) dataGridView1[7, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 6].Style.BackColor == default || dataGridView1[7, 6].Style.BackColor == Color.Transparent) dataGridView1[7, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (69):
                         if (dataGridView1[8, 6].Style.BackColor == Color.Black) dataGridView1[8, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 6].Style.BackColor == default) dataGridView1[8, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 6].Style.BackColor == default || dataGridView1[8, 6].Style.BackColor == Color.Transparent) dataGridView1[8, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (70):
                         if (dataGridView1[9, 6].Style.BackColor == Color.Black) dataGridView1[9, 6].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 6].Style.BackColor == default) dataGridView1[9, 6].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 6].Style.BackColor == default || dataGridView1[9, 6].Style.BackColor == Color.Transparent) dataGridView1[9, 6].Style.BackColor = Color.Aqua;
                         break;
                     case (71):
                         if (dataGridView1[0, 7].Style.BackColor == Color.Black) dataGridView1[0, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 7].Style.BackColor == default) dataGridView1[0, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 7].Style.BackColor == default || dataGridView1[0, 7].Style.BackColor == Color.Transparent) dataGridView1[0, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (72):
                         if (dataGridView1[1, 7].Style.BackColor == Color.Black) dataGridView1[1, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 7].Style.BackColor == default) dataGridView1[1, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 7].Style.BackColor == default || dataGridView1[1, 7].Style.BackColor == Color.Transparent) dataGridView1[1, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (73):
                         if (dataGridView1[2, 7].Style.BackColor == Color.Black) dataGridView1[2, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 7].Style.BackColor == default) dataGridView1[2, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 7].Style.BackColor == default || dataGridView1[2, 7].Style.BackColor == Color.Transparent) dataGridView1[2, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (74):
                         if (dataGridView1[3, 7].Style.BackColor == Color.Black) dataGridView1[3, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 7].Style.BackColor == default) dataGridView1[3, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 7].Style.BackColor == default || dataGridView1[3, 7].Style.BackColor == Color.Transparent) dataGridView1[3, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (75):
                         if (dataGridView1[4, 7].Style.BackColor == Color.Black) dataGridView1[4, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 7].Style.BackColor == default) dataGridView1[4, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 7].Style.BackColor == default || dataGridView1[4, 7].Style.BackColor == Color.Transparent) dataGridView1[4, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (76):
                         if (dataGridView1[5, 7].Style.BackColor == Color.Black) dataGridView1[5, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 7].Style.BackColor == default) dataGridView1[5, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 7].Style.BackColor == default || dataGridView1[5, 7].Style.BackColor == Color.Transparent) dataGridView1[5, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (77):
                         if (dataGridView1[6, 7].Style.BackColor == Color.Black) dataGridView1[6, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 7].Style.BackColor == default) dataGridView1[6, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 7].Style.BackColor == default || dataGridView1[6, 7].Style.BackColor == Color.Transparent) dataGridView1[6, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (78):
                         if (dataGridView1[7, 7].Style.BackColor == Color.Black) dataGridView1[7, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 7].Style.BackColor == default) dataGridView1[7, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 7].Style.BackColor == default || dataGridView1[7, 7].Style.BackColor == Color.Transparent) dataGridView1[7, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (79):
                         if (dataGridView1[8, 7].Style.BackColor == Color.Black) dataGridView1[8, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 7].Style.BackColor == default) dataGridView1[8, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 7].Style.BackColor == default || dataGridView1[8, 7].Style.BackColor == Color.Transparent) dataGridView1[8, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (80):
                         if (dataGridView1[9, 7].Style.BackColor == Color.Black) dataGridView1[9, 7].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 7].Style.BackColor == default) dataGridView1[9, 7].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 7].Style.BackColor == default || dataGridView1[9, 7].Style.BackColor == Color.Transparent) dataGridView1[9, 7].Style.BackColor = Color.Aqua;
                         break;
                     case (81):
                         if (dataGridView1[0, 8].Style.BackColor == Color.Black) dataGridView1[0, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 8].Style.BackColor == default) dataGridView1[0, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 8].Style.BackColor == default || dataGridView1[0, 8].Style.BackColor == Color.Transparent) dataGridView1[0, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (82):
                         if (dataGridView1[1, 8].Style.BackColor == Color.Black) dataGridView1[1, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 8].Style.BackColor == default) dataGridView1[1, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 8].Style.BackColor == default || dataGridView1[1, 8].Style.BackColor == Color.Transparent) dataGridView1[1, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (83):
                         if (dataGridView1[2, 8].Style.BackColor == Color.Black) dataGridView1[2, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 8].Style.BackColor == default) dataGridView1[2, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 8].Style.BackColor == default || dataGridView1[2, 8].Style.BackColor == Color.Transparent) dataGridView1[2, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (84):
                         if (dataGridView1[3, 8].Style.BackColor == Color.Black) dataGridView1[3, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 8].Style.BackColor == default) dataGridView1[3, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 8].Style.BackColor == default || dataGridView1[3, 8].Style.BackColor == Color.Transparent) dataGridView1[3, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (85):
                         if (dataGridView1[4, 8].Style.BackColor == Color.Black) dataGridView1[4, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 8].Style.BackColor == default) dataGridView1[4, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 8].Style.BackColor == default || dataGridView1[4, 8].Style.BackColor == Color.Transparent) dataGridView1[4, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (86):
                         if (dataGridView1[5, 8].Style.BackColor == Color.Black) dataGridView1[5, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 8].Style.BackColor == default) dataGridView1[5, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 8].Style.BackColor == default || dataGridView1[5, 8].Style.BackColor == Color.Transparent) dataGridView1[5, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (87):
                         if (dataGridView1[6, 8].Style.BackColor == Color.Black) dataGridView1[6, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 8].Style.BackColor == default) dataGridView1[6, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 8].Style.BackColor == default || dataGridView1[6, 8].Style.BackColor == Color.Transparent) dataGridView1[6, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (88):
                         if (dataGridView1[7, 8].Style.BackColor == Color.Black) dataGridView1[7, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 8].Style.BackColor == default) dataGridView1[7, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 8].Style.BackColor == default || dataGridView1[7, 8].Style.BackColor == Color.Transparent) dataGridView1[7, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (89):
                         if (dataGridView1[8, 8].Style.BackColor == Color.Black) dataGridView1[8, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 8].Style.BackColor == default) dataGridView1[8, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 8].Style.BackColor == default || dataGridView1[8, 8].Style.BackColor == Color.Transparent) dataGridView1[8, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (90):
                         if (dataGridView1[9, 8].Style.BackColor == Color.Black) dataGridView1[9, 8].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 8].Style.BackColor == default) dataGridView1[9, 8].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 8].Style.BackColor == default || dataGridView1[9, 8].Style.BackColor == Color.Transparent) dataGridView1[9, 8].Style.BackColor = Color.Aqua;
                         break;
                     case (91):
                         if (dataGridView1[0, 9].Style.BackColor == Color.Black) dataGridView1[0, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[0, 9].Style.BackColor == default) dataGridView1[0, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[0, 9].Style.BackColor == default || dataGridView1[0, 9].Style.BackColor == Color.Transparent) dataGridView1[0, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (92):
                         if (dataGridView1[1, 9].Style.BackColor == Color.Black) dataGridView1[1, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[1, 9].Style.BackColor == default) dataGridView1[1, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[1, 9].Style.BackColor == default || dataGridView1[1, 9].Style.BackColor == Color.Transparent) dataGridView1[1, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (93):
                         if (dataGridView1[2, 9].Style.BackColor == Color.Black) dataGridView1[2, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[2, 9].Style.BackColor == default) dataGridView1[2, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[2, 9].Style.BackColor == default || dataGridView1[2, 9].Style.BackColor == Color.Transparent) dataGridView1[2, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (94):
                         if (dataGridView1[3, 9].Style.BackColor == Color.Black) dataGridView1[3, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[3, 9].Style.BackColor == default) dataGridView1[3, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[3, 9].Style.BackColor == default || dataGridView1[3, 9].Style.BackColor == Color.Transparent) dataGridView1[3, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (95):
                         if (dataGridView1[4, 9].Style.BackColor == Color.Black) dataGridView1[4, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[4, 9].Style.BackColor == default) dataGridView1[4, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[4, 9].Style.BackColor == default || dataGridView1[4, 9].Style.BackColor == Color.Transparent) dataGridView1[4, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (96):
                         if (dataGridView1[5, 9].Style.BackColor == Color.Black) dataGridView1[5, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[5, 9].Style.BackColor == default) dataGridView1[5, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[5, 9].Style.BackColor == default || dataGridView1[5, 9].Style.BackColor == Color.Transparent) dataGridView1[5, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (97):
                         if (dataGridView1[6, 9].Style.BackColor == Color.Black) dataGridView1[6, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[6, 9].Style.BackColor == default) dataGridView1[6, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[6, 9].Style.BackColor == default || dataGridView1[6, 9].Style.BackColor == Color.Transparent) dataGridView1[6, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (98):
                         if (dataGridView1[7, 9].Style.BackColor == Color.Black) dataGridView1[7, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[7, 9].Style.BackColor == default) dataGridView1[7, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[7, 9].Style.BackColor == default || dataGridView1[7, 9].Style.BackColor == Color.Transparent) dataGridView1[7, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (99):
                         if (dataGridView1[8, 9].Style.BackColor == Color.Black) dataGridView1[8, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[8, 9].Style.BackColor == default) dataGridView1[8, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[8, 9].Style.BackColor == default || dataGridView1[8, 9].Style.BackColor == Color.Transparent) dataGridView1[8, 9].Style.BackColor = Color.Aqua;
                         break;
                     case (100):
                         if (dataGridView1[9, 9].Style.BackColor == Color.Black) dataGridView1[9, 9].Style.BackColor = Color.Red;
-                        if (dataGridView1[9, 9].Style.BackColor == default) dataGridView1[9, 9].Style.BackColor = Color.Aqua;
+                        if (dataGridView1[9, 9].Style.BackColor == default || dataGridView1[9, 9].Style.BackColor == Color.Transparent) dataGridView1[9, 9].Style.BackColor = Color.Aqua;
                         break;
                 }
             }
         }
-        public static void ubil(DataGridView dataGridView2, TextBox textBox1, TextBox textBox2)
+        public static void ubil(DataGridView dataGridView2, TextBox textBox1, TextBox textBox2) // при потаплении корабля
         {
             // Первый вариант
-            if (dataGridView2[1, 1].Style.BackColor == Color.Red)
+            if (dataGridView2[1, 1].Style.BackColor == Color.Red) // проверка на убийство
             {
-                dataGridView2[0, 0].Style.BackColor = Color.Aqua;
+                dataGridView2[0, 0].Style.BackColor = Color.Aqua; // перекрашиваем границы вокруг потопленного корабля в голубой
                 dataGridView2[1, 0].Style.BackColor = Color.Aqua;
                 dataGridView2[2, 0].Style.BackColor = Color.Aqua;
                 dataGridView2[2, 1].Style.BackColor = Color.Aqua;
@@ -515,9 +561,7 @@ namespace SeaWars
                 dataGridView2[0, 2].Style.BackColor = Color.Aqua;
                 dataGridView2[0, 1].Style.BackColor = Color.Aqua;
                 dataGridView2[1, 1].Style.BackColor = Color.Crimson;
-                MessageBox.Show("Потопил");
-
-
+                MessageBox.Show("Потопил"); // выводим сообщение о потоплении корабля
             }
             if (dataGridView2[5, 5].Style.BackColor == Color.Red)
             {
@@ -649,13 +693,13 @@ namespace SeaWars
                 && dataGridView2[5, 1].Style.BackColor == Color.Crimson && dataGridView2[7, 3].Style.BackColor == Color.Crimson
                 && dataGridView2[8, 3].Style.BackColor == Color.Crimson && dataGridView2[9, 3].Style.BackColor == Color.Crimson
                 && dataGridView2[0, 3].Style.BackColor == Color.Crimson && dataGridView2[0, 4].Style.BackColor == Color.Crimson
-                && dataGridView2[0, 5].Style.BackColor == Color.Crimson && dataGridView2[0, 6].Style.BackColor == Color.Crimson)
+                && dataGridView2[0, 5].Style.BackColor == Color.Crimson && dataGridView2[0, 6].Style.BackColor == Color.Crimson) // проверка что все кораьли потоплены
             {
-                MessageBox.Show("Вы победили");
-                File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
-                dataGridView2.Enabled = false;
+                MessageBox.Show("Вы победили"); // выводим сообщение о победе
+                File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text); // Записывем счёт ходов и имя адмирала в текстовый документ. Environment.NewLine - c новой строки
+                dataGridView2.Enabled = false; // делаем поле недоступным
             }
-            
+
             // Второй вариант
             if (dataGridView2[0, 0].Style.BackColor == Color.Red)
             {
@@ -813,9 +857,9 @@ namespace SeaWars
                 File.AppendAllText("result.txt", Environment.NewLine + textBox1.Text + " " + textBox2.Text);
                 dataGridView2.Enabled = false;
             }
-            
+
             // Третий вариант
-            if (dataGridView2[1, 6].Style.BackColor == Color.Red) 
+            if (dataGridView2[1, 6].Style.BackColor == Color.Red)
             {
                 dataGridView2[1, 7].Style.BackColor = Color.Aqua;
                 dataGridView2[0, 7].Style.BackColor = Color.Aqua;

@@ -51,6 +51,8 @@ namespace SeaWars
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,7 +61,7 @@ namespace SeaWars
             // 
             // korabli
             // 
-            this.korabli.Location = new System.Drawing.Point(423, 239);
+            this.korabli.Location = new System.Drawing.Point(423, 248);
             this.korabli.Name = "korabli";
             this.korabli.Size = new System.Drawing.Size(212, 23);
             this.korabli.TabIndex = 8;
@@ -72,7 +74,7 @@ namespace SeaWars
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(641, 12);
+            this.dataGridView2.Location = new System.Drawing.Point(641, 21);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView2.Size = new System.Drawing.Size(405, 221);
@@ -85,7 +87,7 @@ namespace SeaWars
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(405, 221);
@@ -95,7 +97,7 @@ namespace SeaWars
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(423, 268);
+            this.button1.Location = new System.Drawing.Point(423, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 23);
             this.button1.TabIndex = 9;
@@ -105,7 +107,7 @@ namespace SeaWars
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(423, 326);
+            this.exit.Location = new System.Drawing.Point(423, 335);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(212, 23);
             this.exit.TabIndex = 10;
@@ -115,7 +117,7 @@ namespace SeaWars
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(423, 297);
+            this.button2.Location = new System.Drawing.Point(423, 306);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 23);
             this.button2.TabIndex = 11;
@@ -130,7 +132,7 @@ namespace SeaWars
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(423, 12);
+            this.groupBox1.Location = new System.Drawing.Point(423, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(212, 221);
             this.groupBox1.TabIndex = 12;
@@ -216,7 +218,7 @@ namespace SeaWars
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(752, 242);
+            this.textBox1.Location = new System.Drawing.Point(752, 251);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(50, 20);
             this.textBox1.TabIndex = 13;
@@ -224,7 +226,7 @@ namespace SeaWars
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(667, 244);
+            this.label1.Location = new System.Drawing.Point(667, 253);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 14;
@@ -232,7 +234,7 @@ namespace SeaWars
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(752, 268);
+            this.textBox2.Location = new System.Drawing.Point(752, 277);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 15;
@@ -241,7 +243,7 @@ namespace SeaWars
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(663, 273);
+            this.label2.Location = new System.Drawing.Point(663, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 16;
@@ -249,7 +251,7 @@ namespace SeaWars
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(474, 270);
+            this.textBox4.Location = new System.Drawing.Point(474, 279);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(115, 20);
             this.textBox4.TabIndex = 18;
@@ -258,7 +260,7 @@ namespace SeaWars
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(111, 258);
+            this.listBox1.Location = new System.Drawing.Point(111, 267);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.Sorted = true;
@@ -267,18 +269,38 @@ namespace SeaWars
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(108, 242);
+            this.label3.Location = new System.Drawing.Point(108, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 20;
             this.label3.Text = "Таблица адмиралов";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(170, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Ваше поле";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(825, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Поле противника";
             // 
             // Pole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1058, 356);
+            this.ClientSize = new System.Drawing.Size(1058, 365);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox4);
@@ -331,5 +353,7 @@ namespace SeaWars
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
