@@ -17,7 +17,7 @@ namespace SeaWars
     {
         int rastanovka = 0;
         int a = 0;
-        int schet = 0;
+        int schet = 0; // Счётчик ходов
         public Pole()
         {
             InitializeComponent();
@@ -25,8 +25,8 @@ namespace SeaWars
 
         private void Pole_Load(object sender, EventArgs e)
         {
-            if (File.Exists("result.txt")) listBox1.Items.AddRange(File.ReadAllLines("result.txt"));
-            //button1.Enabled = false;
+            if (File.Exists("result.txt")) listBox1.Items.AddRange(File.ReadAllLines("result.txt")); // Записываем результаты в листбокс из текстового документа, если документа нет, то создаём его
+            button1.Enabled = false;
             textBox1.ReadOnly = true;
             textBox4.ReadOnly = true;
             textBox4.Visible = false;
@@ -870,7 +870,7 @@ namespace SeaWars
             if (dataGridView2.CurrentCell.Style.BackColor == default) dataGridView2.CurrentCell.Style.BackColor = Color.Aqua;
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Aqua) textBox4.Text = "Мимо";
             if (dataGridView2.CurrentCell.Style.BackColor == Color.Red) textBox4.Text = "Попал";
-            if (dataGridView2.CurrentCell.Style.BackColor == Color.Aqua || dataGridView2.CurrentCell.Style.BackColor == Color.Crimson) dataGridView2.CurrentCell.ReadOnly = true;
+            //if (dataGridView2.CurrentCell.Style.BackColor == Color.Aqua || dataGridView2.CurrentCell.Style.BackColor == Color.Crimson) dataGridView2.CurrentCell.ReadOnly = true;
             Bot.ubil(dataGridView2, textBox1, textBox2);
             textBox1.Text = Convert.ToString(schet);
         }

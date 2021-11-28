@@ -50,6 +50,7 @@ namespace SeaWars
             this.label2 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -225,9 +226,9 @@ namespace SeaWars
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(667, 244);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Счётчик ходов";
+            this.label1.Text = "Счётчик ходов:";
             // 
             // textBox2
             // 
@@ -240,11 +241,11 @@ namespace SeaWars
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(667, 270);
+            this.label2.Location = new System.Drawing.Point(663, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Имя Адмирала";
+            this.label2.Text = "Имя Адмирала:";
             // 
             // textBox4
             // 
@@ -257,11 +258,20 @@ namespace SeaWars
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(80, 239);
+            this.listBox1.Location = new System.Drawing.Point(111, 258);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.Sorted = true;
             this.listBox1.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(108, 242);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Таблица адмиралов";
             // 
             // Pole
             // 
@@ -269,6 +279,7 @@ namespace SeaWars
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1058, 356);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label2);
@@ -319,5 +330,6 @@ namespace SeaWars
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
